@@ -1,0 +1,8 @@
+Model,Accuracy
+Decision Tree,0.682615629984051
+Gaussian Naive Bayes,0.7751196172248804
+Support Vector Machine,0.7974481658692185
+Logistic Regression,0.759170653907496
+Random Forest,0.6858054226475279
+XGBoost,0.6842105263157895
+K-Nearest Neighbors,0.7113237639553429
