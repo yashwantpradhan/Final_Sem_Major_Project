@@ -15,14 +15,10 @@ label_encoder = joblib.load('label_encoder.pkl')
 
 # Function to display the homepage
 def show_homepage():
-    st.title("AI-Powered Crop Recommendation System for India: District and Month-Specific Insights for Optimized Agricultural Practices")
+    st.title("Smart Crop Recommendation System Using ML: District and Month-Specific Insights for Optimized Agricultural Practices")
     st.header("Project Overview")
     st.write("""
-        This comprehensive project aims to develop an AI-driven crop recommendation system specifically designed for Indian farmers. 
-        By leveraging advanced machine learning algorithms, the system analyzes critical environmental factors such as temperature, 
-        humidity, pH, and rainfall to provide district and month-specific crop recommendations. The primary goal is to empower farmers 
-        with data-driven insights, thereby enhancing agricultural productivity and sustainability across diverse regions of India. 
-        The system ranks the best crops to plant based on the given conditions, ensuring informed decision-making for optimized farming practices.
+       This project aims to develop a machine learning-based Smart Crop Recommendation System specifically designed for Indian farmers. By analyzing key environmental parameters such as temperature, humidity, soil pH, and rainfall, the system provides district- and month-specific crop recommendations. Leveraging supervised learning algorithms, it ranks the most suitable crops based on the given conditions to help farmers make informed decisions. The primary goal is to enhance agricultural productivity and promote sustainable farming practices by offering data-driven insights tailored to diverse regions across India.
     """)
     st.header("Project Steps")
     st.write("""
