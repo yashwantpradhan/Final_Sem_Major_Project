@@ -92,6 +92,25 @@ def show_crop_recommendation():
         for i, (crop, score) in enumerate(top_recommendations.iterrows(), start=1):
             st.write(f"{i}. {crop} (Confidence: {score.values[0] * 100:.2f}%)")
 
+        # --- Add bar graph using matplotlib ---
+        import matplotlib.pyplot as plt
+        import seaborn as sns
+
+        fig, ax = plt.subplots()
+        sns.barplot(x=top_recommendations.values.flatten() * 100,
+                    y=top_recommendations.index,
+                    palette='viridis',
+                    ax=ax)
+        ax.set_xlabel("Confidence (%)")
+        ax.set_ylabel("Crop")
+        ax.set_title("Top 5 Crop Predictions (Confidence Scores)")
+        ax.set_xlim(0, 100)
+
+        for i, v in enumerate(top_recommendations.values.flatten() * 100):
+            ax.text(v + 1, i, f"{v:.2f}%", va='center')
+
+        st.pyplot(fig)
+
     if st.button("Back to Home"):
         st.session_state.page = "Home"
 
